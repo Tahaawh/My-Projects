@@ -1,0 +1,34 @@
+﻿C:\Users\Taha\Desktop\New folder\Python-02\Date Filter.py -> C:\Users\Taha\Desktop\New folder\Python-02\date-filter.py
+C:\Users\Taha\Desktop\New folder\Python-02\Email Structure Validator.py -> C:\Users\Taha\Desktop\New folder\Python-02\email-structure-validator.py
+C:\Users\Taha\Desktop\New folder\Python-02\File Line Combiner.py -> C:\Users\Taha\Desktop\New folder\Python-02\file-line-combiner.py
+C:\Users\Taha\Desktop\New folder\Python-02\letter in word.py -> C:\Users\Taha\Desktop\New folder\Python-02\letter-in-word.py
+C:\Users\Taha\Desktop\New folder\Python-02\List Operations Toolbox.py -> C:\Users\Taha\Desktop\New folder\Python-02\list-operations-toolbox.py
+C:\Users\Taha\Desktop\New folder\Python-02\Phone Number Validator.py -> C:\Users\Taha\Desktop\New folder\Python-02\phone-number-validator.py
+C:\Users\Taha\Desktop\New folder\Python-02\User Information Collector.py -> C:\Users\Taha\Desktop\New folder\Python-02\user-information-collector.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Dictionary Info Extractor.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\dictionary-info-extractor.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Dictionary Item Display.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\dictionary-item-display.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Key-Based Dictionary Sort.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\key-based-dictionary-sort.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Key-Value Removal.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\key-value-removal.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Number to Word Mapper.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\number-to-word-mapper.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Pop Last Item.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\pop-last-item.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Score List Generator.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\score-list-generator.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Score Update System.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\score-update-system.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Student Info Manager.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\student-info-manager.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Student Profile with Average.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\student-profile-with-average.py
+C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\Student Score Averager.py -> C:\Users\Taha\Desktop\New folder\Python-02\Dictionary\student-score-averager.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Even Number Filter Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\even-number-filter-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Even Odd Checker Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\even-odd-checker-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Extended Sum Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\extended-sum-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Greatest Median and Mean Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\greatest-median-and-mean-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Lambda Utility Functions.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\lambda-utility-functions.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\List Analysis Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\list-analysis-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\List Comparison Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\list-comparison-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\List Element Sum Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\list-element-sum-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Median Comparison Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\median-comparison-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Odd and Even Separator Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\odd-and-even-separator-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Perfect Numbers Finder Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\perfect-numbers-finder-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Prime and Non-Prime Divider Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\prime-and-non-prime-divider-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Prime and Perfect Filter Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\prime-and-perfect-filter-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Prime List Generator Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\prime-list-generator-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Prime Number Checker Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\prime-number-checker-function.py
+C:\Users\Taha\Desktop\New folder\Python-02\Functions\Sum Function.py -> C:\Users\Taha\Desktop\New folder\Python-02\Functions\sum-function.py
