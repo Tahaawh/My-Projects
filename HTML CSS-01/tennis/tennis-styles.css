@@ -1,0 +1,56 @@
+.container {
+  background-color: #dfdada71;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 16px;
+}
+.rows {
+  display: grid;
+  gap: 16px;
+}
+.row1 {
+  grid-template-columns: 2fr 1fr;
+}
+.col1,
+.col2 {
+  border-radius: 16px;
+  background-color: rgb(3, 98, 76);
+}
+.col2 {
+  background-image: url(./COtqTlp-free-sport-wallpapers.jpg);
+  background-size: cover;
+}
+.row2 {
+  grid-template-columns: 1.2fr 2fr 1fr;
+}
+.col3 {
+  background-image: url(./matthias-david-eE4hMhVmS1M-unsplash.jpg);
+  background-size: cover;
+  border-radius: 16px;
+}
+.row3 {
+  grid-template-columns: 2fr 2fr 1fr;
+}
+.col7,
+.col8,
+.col6 {
+  border: rgb(132, 2, 172) solid 2px;
+}
+.meals {
+  background-color: yellowgreen;
+  border-radius: 16px;
+  padding: 20px;
+}
+.workout {
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 20px;
+}
+::selection {
+  background-color: #fff;
+  color: rgb(3, 98, 76);
+}

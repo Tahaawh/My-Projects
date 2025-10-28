@@ -1,0 +1,9 @@
+/* Styles for html-snippets-collection.html (auto-created)
+   This file is intentionally minimal so the page has a valid stylesheet to load.
+   You can move large inline styles here later if you want. */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+.container { max-width: 1200px; margin: 24px auto; }

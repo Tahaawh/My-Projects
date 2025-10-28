@@ -1,0 +1,353 @@
+برای ارائه‌ی تمامی ۱۵ کدی که اشاره کردید، کدها را به صورت مرتب، شماره‌گذاری‌شده و تمیز بازنویسی می‌کنم. هر کد در یک بخش مجزا نوشته می‌شود تا به‌راحتی قابل تفکیک باشد.
+
+1. ساختار اولیه HTML با متا دیتا
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="موبایل, خرید موبایل">
+    <meta name="description" content="توضیحات مربوطه">
+    <meta name="author" content="نام نویسنده">
+    <meta name="theme-color" content="blue">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ساختار اولیه HTML</h1>
+</body>
+</html>
+
+2. استایل ساده دکمه‌ها
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Styles</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+</html>
+
+3. لینک‌های نسبی و مطلق
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<body>
+    <!-- لینک نسبی -->
+    <a href="./page.html">لینک نسبی</a><br>
+    <!-- لینک مطلق -->
+    <a href="https://example.com">لینک مطلق</a>
+</body>
+</html>
+
+4. لینک تصویر با قابلیت دانلود
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Download</title>
+</head>
+<body>
+    <a href="./image.jpg" download="my-image">دانلود تصویر</a>
+</body>
+</html>
+
+5. لینک تلفن و ایمیل
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Links</title>
+</head>
+<body>
+    <!-- لینک تماس -->
+    <a href="tel:09125027852">تماس با ما</a><br>
+    <!-- لینک ایمیل -->
+    <a href="mailto:example@example.com">ارسال ایمیل</a>
+</body>
+</html>
+
+6. ایجاد کارت ساده
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .card {
+            width: 300px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Title</h2>
+        <p>This is a simple card.</p>
+    </div>
+</body>
+</html>
+
+7. تصویر با افکت‌ها
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+        img {
+            width: 100%;
+            transition: 0.5s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <img src="./example.jpg" alt="Example">
+</body>
+</html>
+
+8. لینک بوکمارک به بخش داخلی صفحه
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+</head>
+<body>
+    <a href="#section">رفتن به بخش خاص</a>
+    <h2 id="section" style="margin-top: 500px;">این بخش خاص است</h2>
+</body>
+</html>
+
+9. پس‌زمینه با گرادینت
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Gradient</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, blue, rgb(0, 204, 255));
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+
+10. دکمه با آیکون SVG
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with SVG</title>
+</head>
+<body>
+    <button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016v-.025H6.54c.03.678 0 7.225 0 7.225z"/>
+        </svg>
+    </button>
+</body>
+</html>
+
+ادامه در بخش بعدی…
+بله، ادامه می‌دهم:
+
+11. فرم ورود
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="username">نام کاربری:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">رمز عبور:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">ورود</button>
+    </form>
+</body>
+</html>
+
+12. ایجاد منوی ساده
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu</title>
+</head>
+<body>
+    <nav>
+        <ul style="list-style-type:none; padding:0; display:flex; gap:20px;">
+            <li><a href="#">خانه</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">خدمات</a></li>
+            <li><a href="#">تماس با ما</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+13. لیست ساده
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple List</title>
+</head>
+<body>
+    <ul>
+        <li>ایتم 1</li>
+        <li>ایتم 2</li>
+        <li>ایتم 3</li>
+    </ul>
+</body>
+</html>
+
+14. جدول ساده
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>عنوان</th>
+            <th>مقدار</th>
+        </tr>
+        <tr>
+            <td>ردیف 1</td>
+            <td>مقدار 1</td>
+        </tr>
+        <tr>
+            <td>ردیف 2</td>
+            <td>مقدار 2</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+15. نمایش پیام‌های هشدار
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Messages</title>
+    <style>
+        .alert {
+            padding: 15px;
+            background-color: red;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .success {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">هشدار: اطلاعات نادرست است!</div>
+    <div class="success">عملیات با موفقیت انجام شد!</div>
+</body>
+</html> .

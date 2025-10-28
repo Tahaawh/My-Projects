@@ -1,0 +1,14 @@
+/* Styles for homework-2.html (auto-created)
+   Add your rules here. */
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  direction: rtl;
+  background: #fff;
+  color: #222;
+}
+.header, .center-box, .red-section {
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 12px;
+}
+.red-section { background: #ffecec; }

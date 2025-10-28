@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.card {
+    background-image: url('/wp12782220-stary-night-4k-wallpapers.jpg');
+    background-size: cover;
+    width: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    color: aliceblue;
+}
+
+.card img {
+    width: 100%;
+    transition: transform 0.8s;
+}
+
+.card img:hover {
+    transform: scale(1.15);
+}
+
+.card h2 {
+    font-family: 'Major Mono Display', serif;
+    color: aliceblue;
+}
+
+.card p {
+    font-family: 'Pacifico', serif;
+    color: aliceblue;
+}
+
+.btn {
+    margin: 10px auto;
+    padding: 12px 8px;
+    display: block;
+    border-radius: 12px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    cursor: pointer;
+    transition: border-radius 0.8s, width 0.8s;
+    width: 30%;
+}
+
+.btn:hover {
+    border-radius: 0;
+    width: 100%;
+}

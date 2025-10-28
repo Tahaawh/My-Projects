@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-transform: capitalize;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .img {
+            width: 500px;
+        }
+
+        .main {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 50px;
+            color: rgb(0, 183, 255);
+        }
+
+        .email, .pass {
+            width: 250px;
+            height: 3.125em;
+            border: 3px solid rgb(0, 183, 255);
+            outline: none;
+            border-radius: 15px;
+            padding: 20px 40px 20px 20px;
+            transition: 0.5s;
+            margin-top: 10px;
+        }
+
+        .email:focus, .pass:focus {
+            box-shadow: 0 0 15px 5px rgb(0, 183, 255);
+        }
+
+        .email::placeholder, .pass::placeholder {
+            color: rgb(0, 183, 255);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .checked {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .checked input[type="checkbox"] {
+            accent-color: rgb(0, 183, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="item-1">
+            <form action="">
+                <h3>Username</h3>
+                <div class="inp-box">
+                    <input type="email" class="email" placeholder="example@mail.com">
+                </div>
+                <h3 style="margin-top: 10px;">Password</h3>
+                <div class="inp-box">
+                    <input type="password" class="pass" placeholder="account password">
+                </div>
+                <div class="inp-box checked">
+                    <input type="checkbox" id="check">
+                    <label for="check">I agree with conditions</label>
+                </div>
+            </form>
+        </div>
+        <div class="item-2">
+            <img src="/Happy-announcement-cuate.png" alt="" class="img">
+        </div>
+    </div>
+</body>
+</html>

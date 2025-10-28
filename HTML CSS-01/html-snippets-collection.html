@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="html-snippets-styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .text-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .text-content h1 {
+            font-size: 36px;
+            color: #222;
+        }
+        .text-content h1 span {
+            color: #f04e30;
+        }
+        .text-content p {
+            margin: 15px 0;
+            color: #555;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .btn.primary {
+            background: #f04e30;
+            color: white;
+        }
+        .btn.secondary {
+            background: #ddd;
+            color: #333;
+        }
+        .image-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .image-content img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <h1>Efficient <span>Task Management</span> is Easier to Use</h1>
+            <p>Welcome to the new world of task and project management, where efficiency meets ease of use.</p>
+            <div class="cta-buttons">
+                <button class="btn primary">Get Started</button>
+                <button class="btn secondary">Learn More</button>
+            </div>
+        </div>
+        <div class="image-content">
+            <div class="new-experience">
+                <h3>Solution to Your Project Quickly and with Quality</h3>
+                <p>A task management experience that goes beyond just an app.</p>
+            </div>
+            <img src="hero-image.jpg" alt="Task Management UI">
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="file" accept="image/*" multiple>
+
+        <label for="inp1">City Name:</label>
+        <input type="text" name="k1" id="inp1" list="datal">
+
+        <datalist id="datal">
+            <option value="LA">LA</option>
+            <option value="newyork">New York</option>
+            <option value="tehran">Tehran</option>
+            <option value="shiraz">Shiraz</option>
+        </datalist>
+
+        <label for="s1">Choose:</label>
+        <select name="s1" id="s1" multiple>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+        <textarea name="textarea1" id="textarea1" cols="40" rows="5"></textarea>
+
+        <fieldset>
+            <legend>Input</legend>
+            <input type="text">
+        </fieldset>
+    </form>
+
+</body>
+</html>

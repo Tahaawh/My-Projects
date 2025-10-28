@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت‌نام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 40%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>مشخصات</h2>
+    
+    <form action="#" method="post">
+        <label for="username">نام کاربری:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">ایمیل:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">کلمه عبور:</label>
+        <input type="password" id="password" name="password" minlength="8" maxlength="12" required>
+        
+        <label for="gender">جنسیت:</label>
+        <select id="gender" name="gender">
+            <option value="male">مرد</option>
+            <option value="female">زن</option>
+            <option value="other">سایر</option>
+        </select>
+
+        <label for="dob">تاریخ تولد:</label>
+        <input type="date" id="dob" name="dob">
+
+        <label for="country">کشور:</label>
+        <input type="text" id="country" name="country">
+
+        <h3>ارسال پیام</h3>
+        <label>واحد مربوطه:</label>
+        <input type="radio" name="department" value="support" checked> پشتیبانی
+        <input type="radio" name="department" value="sales"> مالی
+        <input type="radio" name="department" value="other"> سایر
+
+        <label for="message">پیام:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <label for="file">آپلود تصویر:</label>
+        <input type="file" id="file" name="file" accept="image/*">
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">با شرایط و قوانین موافقم</label>
+
+        <button type="submit" class="submit-btn">ارسال</button>
+    </form>
+</div>
+
+</body>
+</html>

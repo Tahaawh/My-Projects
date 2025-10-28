@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    padding: 25px;
+}
+.div{
+    text-align: center;
+    padding: 15px;
+}
+.div>p{
+    margin-top: 15px;
+}
+
+
+.column-1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-self: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+.card-1 , .card-3{
+    height: 300px;
+    width: 250px;
+    background-color: #ddd;
+    border-radius: 15px;
+    padding: 15px;
+}
+.card-1>h4{
+    margin-top: 190px;
+}
+.card-3>h4{
+    margin-top: 190px;
+}
+.card-2{
+    background-image: url(https://i.pinimg.com/736x/ab/36/dd/ab36dd79129e65310c6d45aedb606691.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 250px;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    color: #fff;
+}
+.card-2>p{
+    margin-top: 170px;
+    word-spacing: 2px;
+}
+.list{
+    transition: .5s;
+}
+.list:hover{
+    color: #ef3636;
+    cursor: pointer;
+}
+.column-2{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: 520px;
+}
+.column-2>.p-1{
+    font-size: 30px;
+}
+.column-2>.p-2{
+    font-size: 20px;
+}
+.img{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+.btn{
+    width: 550px;
+    height: 50px;
+    background-image: url(https://wallpapers.com/images/high/beautiful-sky-background-uzycg24d2q7isdio.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px #ddd;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .5s;
+}
+.btn:hover{
+    padding-left: 25px;
+}
+.div-2{
+    text-align: center;
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 100%;
+    gap: 350px;
+}
+
+.column-3{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+.column-3>p{
+    line-height: 20px;
+}
+.line{
+    background-color: #000;
+    height: 100%;
+    width: 1px;
+    margin: 5px;
+}
+
+.column-4{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    gap: 30px;
+}
+h2{
+    font-size: 40px;
+    color: rgb(22, 183, 215);
+    margin-top: 28px;
+}
+.card{
+    background-color: #ddd;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.card>p{
+    margin-top: 5px;
+}
+
+.div-3{
+    text-align: center;
+    margin-top: 60px;
+}
+.div-3>p{
+    margin-top: 20px;
+}
+
+.column-5{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+    gap: 30px;
+}
+.cardItem{
+    background-color: #ddd;
+    width: 350px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.cardItem>h4{
+    margin-top: 20px;
+}
+.cardItem>p{
+    margin-top: 30px;
+    word-spacing: 3px;
+}
+
+.column-6{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    gap: 30px;
+}
+.cardstar{
+    background-color: #ddd;
+    height: 350px;
+    width: 350px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.cardstar>p{
+    margin-top: 20px;
+    word-spacing: 3px;
+}
+.img-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 170px;
+}
+.image{
+    width: 50px;
+}
+.second{
+    background-color: #ddd;
+    height: 350px;
+    width: 350px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid blue;
+}
+.p-text{
+    margin-top: 15px;
+}
+
+.red-20 {
+    color: red;
+    font-size: 20px;
+}
+
+.orange-22 {
+    color: orange;
+    font-size: 22px;
+}
+
+.yellow-24 {
+    color: yellow;
+    font-size: 24px;
+}
+
+.green-26 {
+    color: green;
+    font-size: 26px;
+}
+
+.blue-20 {
+    color: blue;
+    font-size: 20px;
+}
+
+.purple-22 {
+    color: purple;
+    font-size: 22px;
+}
+
+.pink-24 {
+    color: pink;
+    font-size: 24px;
+}
+
+.brown-26 {
+    color: brown;
+    font-size: 26px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.javascript {
+    font-style: italic;
+}

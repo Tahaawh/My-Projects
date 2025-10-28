@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #c8c3c7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+header {
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(to right, #88a18d, #aec3b0);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+}
+
+button {
+    background: #5e7d6b;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.customers {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.customers img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: -5px;
+    border: 2px solid white;
+}
+
+.customers span {
+    color: white;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.search-icon, .profile-icon {
+    background: transparent;
+    font-size: 18px;
+    color: white;
+}
+
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+strong {
+    color: black;
+}

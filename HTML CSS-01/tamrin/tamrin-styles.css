@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: orange;
+    text-align: right;
+    padding: 15px;
+}
+.header a {
+    text-decoration: none;
+    color: blue;
+}
+.center-box {
+    background-color: cyan;
+    text-align: center;
+    padding: 20px;
+    border: 3px dashed blue;
+}
+.center-box b {
+    font-weight: bold;
+}
+.red-section {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.red-section i {
+    font-style: italic;
+}
+.red-section a {
+    text-decoration: none;
+    color: yellow;
+}
+.text-section {
+    margin: 20px;
+}
+.text-section p {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
