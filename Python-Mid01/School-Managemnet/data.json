@@ -1,0 +1,15 @@
+{
+  "behnam": {
+    "password": "1381",
+    "ticket": [
+      ["hello please contact with us", "user"],
+      ["hellloooo", "user"]
+    ],
+    "data": { "grade": null, "email": null }
+  },
+  "ali": {
+    "password": "4321",
+    "ticket": null,
+    "data": { "grade": null, "email": null }
+  }
+}
