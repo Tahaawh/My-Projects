@@ -1,0 +1,6 @@
+sudo pacman -S hyprland hyprpaper waybar wofi kitty \
+xdg-desktop-portal-hyprland xdg-desktop-portal \
+pipewire pipewire-pulse wireplumber \
+polkit-kde-agent grim slurp wl-clipboard \
+mesa intel-media-driver \
+ttf-dejavu ttf-jetbrains-mono
