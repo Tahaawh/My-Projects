@@ -4,3 +4,8 @@ pipewire pipewire-pulse wireplumber \
 polkit-kde-agent grim slurp wl-clipboard \
 mesa intel-media-driver \
 ttf-dejavu ttf-jetbrains-mono
+
+
+
+sudo systemctl enable NetworkManager
+systemctl --user enable pipewire wireplumber
