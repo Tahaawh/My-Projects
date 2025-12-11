@@ -9,3 +9,93 @@ ttf-dejavu ttf-jetbrains-mono
 
 sudo systemctl enable NetworkManager
 systemctl --user enable pipewire wireplumber
+
+باشه. الان تو GNOME هستی و می‌خواهی هرچیزی که مربوط به Hyprland، Waybar، Rofi و… هست حذف شود تا بعداً دوباره از صفر نصبشان کنی.
+من مرحله‌به‌مرحله و بدون اینکه به GNOME آسیب برسد راهنمایی‌ات می‌کنم.
+
+⸻
+
+1) حذف کامل Hyprland و وابستگی‌ها
+
+این دستور بسته‌های اصلی Hyprland را حذف می‌کند:
+
+sudo pacman -Rns hyprland hyprland-git hypridle hyprlock hyprpaper
+
+(اگر نسخه git نصب نکرده‌ای، pacman خودش می‌گوید که وجود ندارد و رد می‌کند.)
+
+⸻
+
+2) حذف برنامه‌های جانبی مرتبط با Hyprland
+
+اگر نصب کرده‌ای، این‌ها را هم پاک کن:
+
+sudo pacman -Rns waybar rofi rofi-wayland wlogout \
+swaybg swayidle swaylock \
+kitty alacritty \
+dunst mako \
+grim slurp swappy
+
+اگر بعضی‌ها نصب نباشند، مشکلی نیست.
+
+⸻
+
+3) پاک کردن Session های Hyprland از GDM
+
+برای اینکه گزینه‌های Hyprland از منوی لاگین حذف شوند:
+
+sudo rm /usr/share/wayland-sessions/hyprland.desktop
+sudo rm /usr/share/wayland-sessions/hyprland-uwsm.desktop
+
+اگر یکی نبود، طبیعی است.
+
+⸻
+
+4) پاک کردن فایل‌های کانفیگ Hyprland از HOME (خیلی مهم)
+
+به یونیت GNOME آسیب نمی‌زند. فقط Hyprland را ریست می‌کند.
+
+rm -rf ~/.config/hypr
+rm -rf ~/.config/waybar
+rm -rf ~/.config/rofi
+rm -rf ~/.config/sway*
+rm -rf ~/.config/kitty
+rm -rf ~/.config/alacritty
+rm -rf ~/.config/wlogout
+rm -rf ~/.config/dunst
+rm -rf ~/.config/mako
+
+می‌توانی هرکدام را جداگانه بزنی.
+
+⸻
+
+5) پاک کردن دات‌فایل‌های مشترک (اختیاری)
+
+اگر می‌خواهی همه چیز صددرصد تمیز شود:
+
+rm -rf ~/.config/wal
+rm -rf ~/.cache/wal
+
+
+⸻
+
+6) کاملاً تمیز شد
+
+بعد از این مراحل:
+	•	GNOME سالم و بدون تغییر می‌ماند
+	•	Hyprland و همه برنامه‌ها و کانفیگ‌ها پاک شده‌اند
+	•	گزینه Hyprland از منوی لاگین حذف شده است
+
+حالا می‌توانی دوباره از صفر Hyprland را نصب و دات‌فایل دلخواهت را اعمال کنی.
+
+⸻
+
+اگر می‌خواهی راهنمای نصب صفر تا صد Hyprland + Dotfile را هم بدهم، بگو:
+	1.	نصب Hyprland
+	2.	نصب Waybar + Rofi
+	3.	نصب Wlogout
+	4.	نصب Dotfile Manager
+	5.	ایمپورت دات‌فایل حرفه‌ای
+	6.	حل خطاهای احتمالی
+
+فقط بگو:
+بله، نصب از صفر را شروع کنیم.
