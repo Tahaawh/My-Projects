@@ -134,7 +134,56 @@ ls /usr/share/wayland-sessions | grep hypr
 
 اگر hyprland.desktop وجود دارد → آماده‌ای.
 اگر نیست بگو تا بسازیم.
+متوجه شدم — پس فایل سشن Hyprland در سیستم تو وجود ندارد و باید آن را بسازیم تا در GDM ظاهر شود.
 
+الان دقیقاً همان مرحله را از صفر انجام می‌دهیم.
+
+⸻
+
+ساخت فایل Session برای Hyprland (برای GDM)
+	1.	دستور زیر را بزن تا فایل سشن جدید ساخته شود:
+
+sudo nano /usr/share/wayland-sessions/hyprland.desktop
+
+	2.	داخل فایل، این متن را قرار بده:
+
+[Desktop Entry]
+Name=Hyprland
+Comment=Hyprland Session
+Exec=Hyprland
+Type=Application
+DesktopNames=Hyprland
+
+	3.	فایل را ذخیره کن:
+
+	•	Ctrl + O
+	•	Enter
+	•	Ctrl + X
+
+	4.	حالا دوباره چک کن که فایل ساخته شده باشد:
+
+ls /usr/share/wayland-sessions
+
+باید ببینی:
+
+hyprland.desktop
+
+
+⸻
+
+مرحله بعد چیست؟
+
+حالا که فایل Session ساخته شد:
+
+۱. از GNOME لاگ‌اوت کن
+
+2. در صفحه Login روی دکمه Options / Gear بزن
+
+3. گزینه Hyprland را انتخاب کن
+
+4. وارد محیط Hyprland شو
+
+اگر وارد شدی بگو، تا مرحله نهایی (راه‌اندازی دات‌فایل‌ها) را تکمیل کنیم.
 ⸻
 
 مرحله ۷ — ری‌استارت و ورود به Hyprland
