@@ -1,228 +1,150 @@
-باشه، از همین‌جا Hyprland را از صفر، به‌صورت تمیز، استاندارد و بدون تداخل با GNOME روی Arch نصب می‌کنیم.
-مراحل دقیق، کامل و قابل اجرا هستند. فقط کافی است قدم‌به‌قدم دنبال کنی.
+خیلی خوب — من محتوای اصلی این دات‌فایل (GitHub repo) را بررسی کردم تا دقیق‌تر بگویم چه چیزی داخلش هست و چطور باید نصبش کنی.  ￼
 
-شروع کنیم.
+⸻
 
-مرحله ۱ — به‌روزرسانی سیستم
+خلاصه آنچه در این دات‌فایل وجود دارد
 
-(در GNOME اجرا کن)
+این مخزن شامل یک پیکربندی کامل Arch + Hyprland است که موارد زیر را شامل می‌شود:  ￼
 
-sudo pacman -Syu
+۱) اسکریپت نصب
+	•	یک اسکریپت install.sh دارد که:
+	•	پکیج‌ها را نصب می‌کند
+	•	مخزن را در ~/dotfiles کلون می‌کند
+	•	بکاپ از کانفیگ‌های فعلی می‌گیرد
+	•	کانفیگ‌های جدید را اعمال می‌کند
+این اسکریپت مخصوص Arch تست شده است.  ￼
+
+۲) وابستگی‌ها
+
+لیست پکیج‌های نصب‌شده شامل موارد زیر است:  ￼
+
+بخش Hyprland و محیط
+	•	Hyprland
+	•	hyprlock, hypridle
+	•	swaync (مرکز اعلان‌ها)
+	•	vicinae (لانچر)
+	•	waybar (نوار وضعیت)
+	•	waypaper + swww (مدیریت والپیپر)
+	•	wlogout (منوی خروج)
+
+بخش ابزارها و Utilities
+	•	kitty (ترمینال)
+	•	zsh + Oh My Zsh + powerlevel10k
+	•	fastfetch
+	•	flameshot
+	•	lsd
+	•	network-manager-applet
+	•	پشتیبانی Bluetooth و Pipewire
+	•	yay (AUR helper)
+	•	wl-clipboard و wl-clip-persist
+	•	و چندین پکیج دیگر برای ظاهر، آیکون، فونت‌ها و تعامل با GTK/Qt.  ￼
+
+۳) کانفیگ‌ها
+
+در پوشه Configs/ داخل مخزن کانفیگ‌های آماده برای:
+	•	Hyprland
+	•	Waybar
+	•	Vicinae
+	•	zsh & powerlevel10k
+	•	swaync
+	•	Wlogout
+	•	و ابزارهای دیگر وجود دارد.  ￼
+
+۴) اسکریپت‌های کمکی
+
+در پوشه Scripts/ چند فایل کمکی برای نصب و بکاپ‌گیری هست.  ￼
+
+⸻
+
+نکاتی که قبل از نصب باید بدانی
+
+مهم: پیکربندی GNOME با این نصب تغییر نمی‌کند
+
+این مخزن فقط کانفیگ‌های مربوط به Hyprland و ابزارهایش را اعمال می‌کند و GNOME را دست‌کاری نمی‌کند (مگر اینکه بخواهی).  ￼
+
+⸻
+
+قدم‌های پیشنهادی برای نصب
+
+قدم 1 — پیش‌نیاز: وارد محیط Hyprland شو
+
+قبل از اجرای نصب، مطمئن شو که:
+	•	به سشن Hyprland وارد شده‌ای (نه GNOME).
+	•	چون اسکریپت فرض می‌کند Hyprland از قبل نصب و قابل اجراست.  ￼
+
+اگر هنوز Hyprland را اجرا نکرده‌ای، از GDM خارج شو و Hyprland را انتخاب کن.
+
+⸻
+
+قدم 2 — کلون کردن مخزن
+
+در ترمینال (در محیط Hyprland):
+
+git clone https://github.com/retrilzzy/dotfiles.git ~/dotfiles
 
 
 ⸻
 
-مرحله ۲ — نصب Hyprland و پکیج‌های ضروری
+قدم 3 — اجرای اسکریپت نصب
 
-این مجموعه، کامل‌ترین و مینیمال‌ترین نصب استاندارد Hyprland است:
+در همان پوشه:
 
-sudo pacman -S hyprland \
-xdg-desktop-portal-hyprland \
-waybar \
-rofi-wayland \
-kitty \
-wlogout \
-swaybg \
-swaylock \
-swayidle \
-brightnessctl \
-pavucontrol \
-blueman \
-network-manager-applet \
-thunar \
-grim slurp swappy \
-ttf-jetbrains-mono-nerd
+cd ~/dotfiles/Scripts
+chmod +x install.sh
+./install.sh
 
-توضیح کوتاه:
-	•	hyprland → خود محیط
-	•	portal → برای screen share و پرمیشن‌ها
-	•	waybar → نوار وضعیت
-	•	rofi-wayland → لانچر
-	•	kitty → ترمینال
-	•	grim/slurp/swappy → اسکرین‌شات
-	•	swaybg → والپیپر
-	•	thunar → فایل منیجر سبک
-
-GNOME آسیب نمی‌بیند، همه جداگانه نصب می‌شود.
+این اسکریپت:
+	•	پکیج‌های لازم را نصب می‌کند
+	•	کانفیگ‌ها را جابه‌جا می‌کند
+	•	بکاپ می‌گیرد
+و در نهایت سیستم را طبق تنظیمات آماده می‌کند.  ￼
 
 ⸻
 
-مرحله ۳ — ساخت فولدرهای کانفیگ
+قدم 4 — بررسی و تنظیم دستی پس از نصب
 
-(اگر قبلاً پاک شده‌اند، دوباره بساز)
+بعد از پایان نصب:
 
-mkdir -p ~/.config/hypr
-mkdir -p ~/.config/waybar
-mkdir -p ~/.config/rofi
-mkdir -p ~/.config/wlogout
+a) تصویر زمینه (Wallpaper)
+اسکریپت والپیپر را اجرا کن یا والپیپرهای دلخواهت را به:
 
+~/Pictures/Wallpapers
 
-⸻
+انتقال بده و از طریق اسکریپت‌ها اعمال کن.  ￼
 
-مرحله ۴ — تولید کانفیگ اولیه برای Hyprland
+b) Zsh/P10K
+اگر Zsh را فعال می‌کنی:
 
-یک کانفیگ امن و استاندارد برای شروع:
+p10k configure
 
-nano ~/.config/hypr/hyprland.conf
-
-داخلش این را قرار بده:
-
-monitor=,preferred,auto,1
-
-exec-once = waybar
-exec-once = nm-applet
-exec-once = blueman-applet
-
-input {
-    kb_layout = us
-    follow_mouse = 1
-}
-
-general {
-    gaps_in = 5
-    gaps_out = 20
-    border_size = 2
-    resize_on_border = true
-}
-
-decoration {
-    rounding = 10
-}
-
-animations {
-    enabled = true
-}
-
-# Keybinds
-bind = SUPER,Return,exec,kitty
-bind = SUPER,D,exec,rofi -show drun
-bind = SUPER,Q,killactive,
-bind = SUPER,E,exec,thunar
-bind = SUPER,L,exec,swaylock
-
-سیو کن:
-Ctrl + O
-Enter
-Ctrl + X
+تم نهایی ترمینال را تنظیم کن.  ￼
 
 ⸻
 
-مرحله ۵ — ساخت کانفیگ Waybar مینیمال
+نکات پیکربندی پس از نصب
 
-nano ~/.config/waybar/config.jsonc
+این دات‌فایل‌ها شامل:
+	•	keybind‌ها برای اجرای ترمینال/لانچر/مدیریت پنجره
+	•	تنظیمات Waybar
+	•	تنظیمات launchers و اعلان‌ها
+	•	تم‌های GTK/Qt
 
-داخلش:
+هستند و برای Arch + Hyprland طراحی شده‌اند.  ￼
 
-{
-  "layer": "top",
-  "position": "top",
-  "modules-left": ["workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "network", "pulseaudio"]
-}
-
-
-⸻
-
-مرحله ۶ — فعال کردن GDM Session
-
-Hyprland باید در منوی لاگین دیده شود.
-
-این فایل باید وجود داشته باشد:
-
-ls /usr/share/wayland-sessions | grep hypr
-
-اگر hyprland.desktop وجود دارد → آماده‌ای.
-اگر نیست بگو تا بسازیم.
-متوجه شدم — پس فایل سشن Hyprland در سیستم تو وجود ندارد و باید آن را بسازیم تا در GDM ظاهر شود.
-
-الان دقیقاً همان مرحله را از صفر انجام می‌دهیم.
+برای مثال، keybind‌ها شامل:
+	•	Super + W برای ترمینال
+	•	Super + R برای لانچر
+	•	Super + E برای فایل‌منیجر
+	•	و چندین ترکیب دیگر که در README لیست شده‌اند.  ￼
 
 ⸻
 
-ساخت فایل Session برای Hyprland (برای GDM)
-	1.	دستور زیر را بزن تا فایل سشن جدید ساخته شود:
+قبل از اجرای نهایی از تو می‌پرسم
 
-sudo nano /usr/share/wayland-sessions/hyprland.desktop
+۲ سؤال مهم:
 
-	2.	داخل فایل، این متن را قرار بده:
+۱) آیا می‌خواهی کل اسکریپت نصب را اجرا کنی (تمام پکیج‌ها + کانفیگ‌ها)
+یا
+۲) فقط می‌خواهی کانفیگ‌ها را دستی در ~/.config بریزی و نخواهی پکیج‌ها را خودکار نصب کند؟
 
-[Desktop Entry]
-Name=Hyprland
-Comment=Hyprland Session
-Exec=Hyprland
-Type=Application
-DesktopNames=Hyprland
-
-	3.	فایل را ذخیره کن:
-
-	•	Ctrl + O
-	•	Enter
-	•	Ctrl + X
-
-	4.	حالا دوباره چک کن که فایل ساخته شده باشد:
-
-ls /usr/share/wayland-sessions
-
-باید ببینی:
-
-hyprland.desktop
-
-
-⸻
-
-مرحله بعد چیست؟
-
-حالا که فایل Session ساخته شد:
-
-۱. از GNOME لاگ‌اوت کن
-
-2. در صفحه Login روی دکمه Options / Gear بزن
-
-3. گزینه Hyprland را انتخاب کن
-
-4. وارد محیط Hyprland شو
-
-اگر وارد شدی بگو، تا مرحله نهایی (راه‌اندازی دات‌فایل‌ها) را تکمیل کنیم.
-⸻
-
-مرحله ۷ — ری‌استارت و ورود به Hyprland
-
-Logout → در صفحه ورود:
-
-Hyprland را انتخاب کن.
-(نه GNOME و نه uwsm)
-
-وارد محیط می‌شوی.
-
-⸻
-
-مرحله ۸ — تست نوار، لانچر و…
-
-در محیط Hyprland:
-	•	SUPER + Enter → ترمینال
-	•	SUPER + D → Rofi
-	•	SUPER + E → Thunar
-	•	SUPER + Q → بستن پنجره
-	•	SUPER + L → قفل
-	•	Waybar باید بالا باشد
-	•	ماوس و انیمیشن‌ها باید روان باشند
-
-اگر مشکلی دیدی، همین‌جا بگو.
-
-⸻
-
-مرحله ۹ — آماده‌سازی برای نصب Dotfile
-
-وقتی Hyprland سالم اجرا شد، می‌توانیم:
-	•	dotfile manager نصب کنیم
-	•	یک دات‌فایل حرفه‌ای import کنیم
-	•	همه چیز را کاملاً شخصی‌سازی کنیم
-
-⸻
-
-الان بگو:
-
-وارد Hyprland شدی؟
-
-اگر وارد شدی و محیط آمد، مرحله بعدی (نصب Dotfile) را شروع می‌کنیم.
+بگو گزینه 1 یا گزینه 2 تا راهنمایی را دقیق‌تر ادامه دهیم.
