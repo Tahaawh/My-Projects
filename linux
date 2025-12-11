@@ -1,62 +1,72 @@
-متوجه شدم. پس مشکل این است که کانفیگ‌ها هنوز روی Hyprland اعمال نشده‌اند، حتی بعد از اجرای اسکریپت و ریبوت. احتمالاً چند عامل باعث شده:
-	1.	اسکریپت تنها فایل‌ها را کپی کرده اما symlink یا مسیر درست را برای Hyprland ایجاد نکرده.
-	2.	Hyprland، Waybar، یا Rofi ممکن است کانفیگ‌ها را از مسیر دیگری بخوانند یا قبلاً کانفیگ‌های قدیمی cache شده‌اند.
-	3.	برخی ابزارها (Waybar، لانچر) باید دوباره اجرا شوند بعد از جایگذاری کانفیگ‌ها.
+بله — hyprland-starter از مخزن GitHub یک پکیج آماده‌ی شروع برای محیط Hyprland است که می‌تواند به تو کمک کند یک کانفیگ پایه و قابل استفاده از Hyprland را روی سیستم Arch نصب کنی.  ￼
+
+در این پروژه امکانات زیر فراهم شده‌اند:
+	•	کانفیگ قابل استفاده برای Hyprland و ابزارهای جانبی مثل Waybar، Rofi، Kitty، dunst، thunar و…  ￼
+	•	اسکریپت‌های نصب برای راحت‌تر کردن راه‌اندازی  ￼
+
+این starter برای شروع شخصی‌سازی و اجرا طراحی شده و می‌تواند جایگزینی خوب برای دات‌فایل قبلی باشد.
 
 ⸻
 
-راهکار مرحله به مرحله برای رفع مشکل
+روش‌های نصب hyprland‑starter
 
-1️⃣ پاکسازی کانفیگ‌های قدیمی
+گزینه A — با اسکریپت مستقیم
 
-در محیط Hyprland، این دستورات را اجرا کن:
+در ترمینال Hyprland (یا GNOME)، این دستور را اجرا کن:
 
-rm -rf ~/.config/hypr/*
-rm -rf ~/.config/waybar/*
-rm -rf ~/.config/rofi/*
-rm -rf ~/.config/wLogout/*
-rm -rf ~/.config/kitty/*
+bash <(curl -s https://raw.githubusercontent.com/mylinuxforwork/hyprland-starter/main/setup.sh)
 
-این باعث می‌شود کانفیگ‌های قدیمی حذف شوند و فقط کانفیگ‌های دات‌فایل اعمال شوند.
+این اسکریپت بسته‌های اصلی را نصب می‌کند و کانفیگ‌های مربوطه را در ~/.config قرار می‌دهد.  ￼
 
-⸻
-
-2️⃣ کپی کانفیگ‌ها از دات‌فایل
-
-از پوشه کلون شده، کانفیگ‌ها را مستقیماً به ~/.config منتقل کن:
-
-cp -r ~/dotfiles/Configs/hypr/* ~/.config/hypr/
-cp -r ~/dotfiles/Configs/waybar/* ~/.config/waybar/
-cp -r ~/dotfiles/Configs/rofi/* ~/.config/rofi/
-cp -r ~/dotfiles/Configs/wLogout/* ~/.config/wLogout/
-cp -r ~/dotfiles/Configs/kitty/* ~/.config/kitty/
-
-این اطمینان می‌دهد که Hyprland دقیقاً همان کانفیگ‌های repo را می‌خواند.
+توجه داشته باش که در این روش:
+	•	اینترنت فعال باشد
+	•	sudo را در طول نصب بدهی
+چون اسکریپت می‌خواهد بسته‌ها را نصب و کانفیگ‌ها را اعمال کند.
 
 ⸻
 
-3️⃣ ریستارت ابزارها
-	1.	Waybar را ببند و دوباره اجرا کن:
+گزینه B — نصب دستی با Dotfiles Installer
 
-killall waybar
-waybar &
+اگر قبلاً Dotfiles Installer را نصب کرده باشی، می‌توانی URL زیر را در آن وارد کنی:
 
-	2.	Hyprland را reload کن:
+https://raw.githubusercontent.com/mylinuxforwork/hyprland-starter/main/hyprland-starter.dotinst
+
+سپس نصب را از طریق رابط Dotfiles Installer انجام بده.  ￼
+
+⸻
+
+بسته‌های پیشنهادی که باید نصب شوند (اگر اسکریپت نمی‌خواهد همه را نصب کند)
+
+در صورتی که می‌خواهی دستی نصب کنی، این‌ها را نصب کن:
+
+sudo pacman -S hyprland waybar rofi-wayland kitty dunst thunar \
+xdg-desktop-portal-hyprland qt5-wayland qt6-wayland hyprpaper hyprlock \
+firefox ttf-font-awesome ttf-fira-code brightnessctl networkmanager \
+wireplumber
+
+این لیست مطابق با نیازهای starter طراحی شده است.  ￼
+
+⸻
+
+بعد از نصب
+	1.	Logout و دوباره وارد Hyprland شو.
+	2.	اگر Waybar، والپیپر یا keybindها کار نکردند، مطمئن شو که فایل‌های کانفیگ در ~/.config/hypr، ~/.config/waybar/ و ~/.config/rofi/ وجود دارند.
+	3.	می‌توانی با دستور زیر کانفیگ‌ها را ریلود کنی:
 
 hyprctl reload
 
-اگر تغییرات ظاهر نشد، Logout → Login کن.
 
 ⸻
 
-4️⃣ بررسی نتیجه
-	•	Waybar ظاهر جدید دارد؟
-	•	والپیپر و تم‌ها اعمال شده‌اند؟
-	•	SUPER+Enter → kitty
-	•	SUPER+D → Rofi یا Wofi
+تست عملکرد
+
+بعد از راه‌اندازی:
+	•	SUPER + Enter → ترمینال
+	•	SUPER + Ctrl + Enter → لانچر
+	•	SUPER + E → فایل‌منیجر
+	•	Waybar باید بالا نمایش داده شود
+	•	والپیپر و تم ظاهر جدید را داشته باشند
 
 ⸻
 
-اگر بعد از این کار هنوز تغییرات ظاهر نشد، می‌توانیم یک کانفیگ مینیمال تستی آماده کنیم و فقط آن را جایگزین کنیم تا مطمئن شویم Hyprland کانفیگ‌ها را می‌خواند.
-
-می‌خوای همین کار را انجام دهیم؟
+اگر دوست داری، می‌توانم قدم‌به‌قدم نصب این hyprland‑starter را در Arch به صورت دقیق (دستورات کامل) برایت بنویسم تا مطمئن شویم تغییرات ظاهر می‌شوند. می‌خواهی همین کار را انجام دهیم؟
