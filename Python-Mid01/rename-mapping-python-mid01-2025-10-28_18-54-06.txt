@@ -1,3 +1,0 @@
-﻿C:\Users\Taha\Desktop\New folder\Python-Mid01\section 1\password_create.py -> C:\Users\Taha\Desktop\New folder\Python-Mid01\section 1\password-create.py
-C:\Users\Taha\Desktop\New folder\Python-Mid01\section 1\running_script.py -> C:\Users\Taha\Desktop\New folder\Python-Mid01\section 1\running-script.py
-C:\Users\Taha\Desktop\New folder\Python-Mid01\section 1\test_ur_self3.py -> C:\Users\Taha\Desktop\New folder\Python-Mid01\section 1\test-ur-self3.py
