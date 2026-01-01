@@ -13,10 +13,10 @@ Notes
 ```
 HTML CSS-01/
 ├── Astronaut/            # astronaut info card demo
-├── BlueGlow Button/      # glowing button styles
+├── BlueGlow-Button/      # glowing button styles
 ├── Flex/                 # flexbox examples and utilities
-├── Grid Fruits/          # grid/card layouts
+├── Grid-Fruits/          # grid/card layouts
 ├── neon-hover/           # neon button hover effects
-├── new year card/        # greeting card examples
+├── new-year-card/        # greeting card examples
 └── Shop/                 # small shop templates
 ```
