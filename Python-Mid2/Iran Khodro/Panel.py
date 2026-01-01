@@ -20,12 +20,12 @@ class IranKhodroApp(ctk.CTk):
         
         # تنظیمات پنجره اصلی
         self.title("سیستم مدیریت ایران خودرو")
-        self.geometry("1280x720")
+        self.geometry("800x600")
         
         # مرکز کردن پنجره در صفحه
         self.update_idletasks()
-        width = 1280
-        height = 720
+        width = 800
+        height = 600
         x = (self.winfo_screenwidth() // 2) - (width // 2)
         y = (self.winfo_screenheight() // 2) - (height // 2)
         self.geometry(f'{width}x{height}+{x}+{y}')
@@ -140,9 +140,110 @@ class IranKhodroApp(ctk.CTk):
             font=ctk.CTkFont(size=14)
         ).pack(pady=5)
 
+    # ==================== صفحه ثبت نام ====================
+    def show_register_page(self):
+        """نمایش صفحه ثبت نام"""
+        self.clear_window()
+        
+        main_frame = ctk.CTkFrame(self)
+        main_frame.pack(expand=True, fill="both", padx=20, pady=20)
+        
+        title_label = ctk.CTkLabel(
+            main_frame,
+            text="ثبت نام کاربر جدید",
+            font=ctk.CTkFont(size=24, weight="bold")
+        )
+        title_label.pack(pady=30)
+        
+        register_frame = ctk.CTkFrame(main_frame)
+        register_frame.pack(pady=20)
+        
+        # نام کاربری
+        ctk.CTkLabel(register_frame, text="نام کاربری:", font=ctk.CTkFont(size=14)).pack(pady=5)
+        username_entry = ctk.CTkEntry(register_frame, width=300)
+        username_entry.pack(pady=5)
+        
+        # کد ملی
+        ctk.CTkLabel(register_frame, text="کد ملی (10 رقم):", font=ctk.CTkFont(size=14)).pack(pady=5)
+        national_id_entry = ctk.CTkEntry(register_frame, width=300)
+        national_id_entry.pack(pady=5)
+        
+        # رمز عبور
+        ctk.CTkLabel(register_frame, text="رمز عبور:", font=ctk.CTkFont(size=14)).pack(pady=5)
+        password_entry = ctk.CTkEntry(register_frame, width=300, show="*")
+        password_entry.pack(pady=5)
+        
+        # تکرار رمز عبور
+        ctk.CTkLabel(register_frame, text="تکرار رمز عبور:", font=ctk.CTkFont(size=14)).pack(pady=5)
+        confirm_password_entry = ctk.CTkEntry(register_frame, width=300, show="*")
+        confirm_password_entry.pack(pady=5)
+        
+        def register():
+            username = username_entry.get().strip()
+            national_id = national_id_entry.get().strip()
+            password = password_entry.get()
+            confirm_password = confirm_password_entry.get()
+            
+            if not all([username, national_id, password, confirm_password]):
+                messagebox.showerror("خطا", "لطفا تمام فیلدها را پر کنید")
+                return
+            
+            if len(national_id) != 10 or not national_id.isdigit():
+                messagebox.showerror("خطا", "کد ملی باید 10 رقم باشد")
+                return
+            
+            if password != confirm_password:
+                messagebox.showerror("خطا", "رمز عبور و تکرار آن یکسان نیستند")
+                return
+            
+            is_valid, msg = self.validate_password(password)
+            if not is_valid:
+                messagebox.showerror("خطا", msg)
+                return
+            
+            users = self.load_users()
+            
+            if username in users:
+                messagebox.showerror("خطا", "این نام کاربری قبلا ثبت شده است")
+                return
+            
+            users[username] = {
+                "password": password,
+                "role": "user",
+                "national_id": national_id,
+                "photo": "",
+                "cart": [],
+                "purchase_history": []
+            }
+            
+            self.save_users(users)
+            messagebox.showinfo("موفق", "ثبت نام با موفقیت انجام شد")
+            self.show_login_page()
+        
+        ctk.CTkButton(
+            register_frame,
+            text="ثبت نام",
+            width=200,
+            command=register,
+            font=ctk.CTkFont(size=14, weight="bold")
+        ).pack(pady=20)
+        
+        ctk.CTkButton(
+            register_frame,
+            text="بازگشت به ورود",
+            width=200,
+            command=self.show_login_page,
+            fg_color="gray"
+        ).pack(pady=5)
+
     # ==================== پنل ادمین ====================
     def show_admin_panel(self):
         """نمایش پنل ادمین"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         self.clear_window()
         
         # فریم اصلی
@@ -337,6 +438,11 @@ class IranKhodroApp(ctk.CTk):
     # ==================== پنل کاربر ====================
     def show_user_panel(self):
         """نمایش پنل کاربر"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         self.clear_window()
         
         main_frame = ctk.CTkFrame(self)
@@ -426,6 +532,11 @@ class IranKhodroApp(ctk.CTk):
     
     def add_to_cart(self, car):
         """افزودن به سبد خرید"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         users = self.load_users()
         users[self.current_user['username']]['cart'].append(car)
         self.save_users(users)
@@ -434,6 +545,11 @@ class IranKhodroApp(ctk.CTk):
     
     def setup_cart_tab(self, parent):
         """تنظیم تب سبد خرید"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         cart_frame = ctk.CTkScrollableFrame(parent)
         cart_frame.pack(expand=True, fill="both", padx=10, pady=10)
         
@@ -477,6 +593,11 @@ class IranKhodroApp(ctk.CTk):
     
     def remove_from_cart(self, index):
         """حذف از سبد خرید"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         users = self.load_users()
         del users[self.current_user['username']]['cart'][index]
         self.save_users(users)
@@ -485,6 +606,11 @@ class IranKhodroApp(ctk.CTk):
     
     def purchase_cart(self):
         """خرید سبد"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         if messagebox.askyesno("تایید خرید", "آیا از خرید مطمئن هستید؟"):
             users = self.load_users()
             cart = users[self.current_user['username']]['cart']
@@ -505,10 +631,18 @@ class IranKhodroApp(ctk.CTk):
     
     def setup_profile_tab(self, parent):
         """تنظیم تب پروفایل"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         profile_frame = ctk.CTkScrollableFrame(parent)
         profile_frame.pack(expand=True, fill="both", padx=10, pady=10)
         
         user_data = self.current_user['data']
+        
+        if not isinstance(user_data, dict):
+            user_data = {}
         
         ctk.CTkLabel(profile_frame, text="نام کاربری:", font=ctk.CTkFont(size=14)).pack(pady=5)
         ctk.CTkLabel(
@@ -527,6 +661,9 @@ class IranKhodroApp(ctk.CTk):
         password_entry.pack(pady=5)
         
         def save_profile():
+            if self.current_user is None:
+                return
+            assert self.current_user is not None
             new_national_id = national_id_entry.get().strip()
             new_password = password_entry.get()
             
@@ -584,6 +721,11 @@ class IranKhodroApp(ctk.CTk):
     # ==================== سیستم کامنت ====================
     def show_comments(self, car):
         """نمایش پنجره کامنت‌ها"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            self.show_login_page()
+            return
+        assert self.current_user is not None
         comments_window = ctk.CTkToplevel(self)
         comments_window.title(f"کامنت‌های {car['name']}")
         comments_window.geometry("700x600")
@@ -619,6 +761,10 @@ class IranKhodroApp(ctk.CTk):
         comment_entry.pack(fill="x", padx=10, pady=5)
         
         def add_comment():
+            if self.current_user is None:
+                messagebox.showerror("خطا", "ابتدا وارد شوید")
+                return
+            assert self.current_user is not None
             comment_text = comment_entry.get("1.0", "end").strip()
             
             if not comment_text:
@@ -655,6 +801,8 @@ class IranKhodroApp(ctk.CTk):
     
     def refresh_comments(self, parent, car):
         """به‌روزرسانی لیست کامنت‌ها"""
+        if self.current_user is None:
+            return
         for widget in parent.winfo_children():
             widget.destroy()
         
@@ -712,6 +860,10 @@ class IranKhodroApp(ctk.CTk):
     
     def delete_comment(self, comment, car, parent):
         """حذف کامنت"""
+        if self.current_user is None:
+            messagebox.showerror("خطا", "ابتدا وارد شوید")
+            return
+        assert self.current_user is not None
         if messagebox.askyesno("تایید", "آیا از حذف این کامنت مطمئن هستید؟"):
             comments = self.load_comments()
             car_id = str(car['id'])
