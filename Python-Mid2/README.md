@@ -7,7 +7,7 @@ How to run
 
 Example subfolders
 - `Iran Khodro/` — Iran Khodro demo project
-- `School-Managemnet/` — school management project
+- `School-Management/` — school management project
 
 ## Contents (directory tree)
 
@@ -17,7 +17,7 @@ Python-Mid2/
 │   ├── main.py
 │   ├── backend.py
 │   └── auth_page.py
-├── School-Managemnet/
+├── School-Management/
 │   ├── main.py
 │   ├── menus.py
 │   └── defs.py
