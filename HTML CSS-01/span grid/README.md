@@ -1,6 +1,6 @@
 # Span Grid
 
-Examples demonstrating grid spans and responsive card layouts.
+Examples demonstrating CSS grid spans and responsive card layouts.
 
 How to view
-- Open `.html` examples in a browser.
+- Open the `.html` example files in a browser.

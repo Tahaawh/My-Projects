@@ -1,49 +1,26 @@
-# My-Projects
+# My Projects
 
-This repository contains small web and Python projects and exercises organized into folders.
+A compact collection of front-end and Python projects, exercises, and small demos organized into folders.
 
-Folders:
-- HTML CSS-01: HTML/CSS examples and components
-- Python-01, Python-02: Python exercises and utilities
-- Python-Mid01, Python-Mid2: Mid-term project folders
+Top-level folders
+- `HTML CSS-01` — HTML and CSS examples and UI snippets
+- `Python-01`, `Python-02` — Python exercises, utilities, and sample scripts
+- `Python-Mid01`, `Python-Mid2` — mid-term project folders
 
-How to use
-- HTML files: open in a browser
-- Python files: run with Python 3 (e.g., `python script.py`)
+Usage
+- Open `.html` files in a web browser to view demos
+- Run Python scripts with Python 3: `python script.py`
 
-Contributions
-- Add a short README inside each folder describing its purpose.
+If a folder lacks details, open its `README.md` and add short notes about purpose and how to run examples.
 
-## Contents (directory tree)
+## Contents (high-level)
 
 ```
-. /
+/
 ├── LICENSE
-├── HTML CSS-01/
-│   ├── html-snippets-collection.html
-│   ├── homework-2.html
-│   ├── Astronaut/
-│   │   └── astronaut-info-card.html
-│   ├── Flex/
-│   │   └── flex-example.html
-│   └── Shop/
-│       └── shop-index.html
-├── Python-01/
-│   ├── number-analysis.py
-│   ├── Sample Codes/
-│   │   └── boys-and-girls.py
-│   └── Useful Codes/
-│       └── prime-number.py
-├── Python-02/
-│   ├── date-filter.py
-│   ├── Dictionary/
-│   │   └── student-info-manager.py
-│   └── Functions/
-│       └── even-number-filter-function.py
-├── Python-Mid01/
-│   └── Library/
-│       └── panel.py
-└── Python-Mid2/
-	├── Iran Khodro/
-	└── School-Managemnet/
+├── HTML CSS-01/        # HTML & CSS examples
+├── Python-01/          # Python sample scripts
+├── Python-02/          # Python exercises (Dictionary, Functions)
+├── Python-Mid01/       # Mid-term projects
+└── Python-Mid2/        # Mid-term projects
 ```

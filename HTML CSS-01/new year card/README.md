@@ -1,6 +1,6 @@
 # New Year Card
 
-New year greeting card examples using HTML/CSS.
+New year greeting card examples created with HTML and CSS.
 
 How to view
-- Open `.html` files in a browser.
+- Open the `.html` files in a browser.

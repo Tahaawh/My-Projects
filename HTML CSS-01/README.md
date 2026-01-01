@@ -1,36 +1,22 @@
-# HTML CSS-01
+# HTML & CSS Examples
 
-Collection of HTML/CSS examples, snippets, and small UI components.
+A collection of small HTML/CSS demos, components, and layout examples.
 
 How to view
 - Open any `.html` file in a web browser.
 
 Notes
-- Subfolders contain themed components (cards, buttons, grid examples, etc.).
+- Subfolders group demos by theme (cards, buttons, grids, layout utilities).
 
-## Contents (directory tree)
+## Example contents
 
 ```
 HTML CSS-01/
-├── html-snippets-collection.html
-├── homework-2.html
-├── Astronaut/
-│   ├── astronaut-info-card.html
-│   └── astronaut-info-card.css
-├── BlueGlow Button/
-│   └── blueglow-button-demo.html
-├── Flex/
-│   └── flex-example.html
-├── Grid Fruits/
-│   └── fresh-picks.html
-├── neon-hover/
-│   └── neon-hover-button.html
-├── new year card/
-│   └── new-year-card.html
-├── Nowruz/
-│   └── nowruz-card.html
-├── Poets of Persia/
-│   └── poets-of-persia.html
-└── Shop/
-	└── shop-index.html
+├── Astronaut/            # astronaut info card demo
+├── BlueGlow Button/      # glowing button styles
+├── Flex/                 # flexbox examples and utilities
+├── Grid Fruits/          # grid/card layouts
+├── neon-hover/           # neon button hover effects
+├── new year card/        # greeting card examples
+└── Shop/                 # small shop templates
 ```
