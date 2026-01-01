@@ -1,6 +1,13 @@
-# Python-Mid2
+# Python-Mid2 — Mid-term Projects
 
-Mid-term project folder. Add project details and run instructions here.
+Collection of mid-term projects and related modules. Each subfolder may contain its own README and run instructions.
+
+How to run
+- Check the subfolder README or run `main.py` inside the relevant project directory with Python 3.
+
+Example subfolders
+- `Iran Khodro/` — Iran Khodro demo project
+- `School-Managemnet/` — school management project
 
 ## Contents (directory tree)
 

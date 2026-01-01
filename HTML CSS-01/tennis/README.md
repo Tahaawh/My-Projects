@@ -1,6 +1,9 @@
-# Tennis Examples
+# Tennis — Layout Examples
 
-Layout and page examples for tennis-themed designs.
+Examples and layouts for tennis-themed pages.
 
 How to view
-- Open `.html` files in a browser.
+- Open the `.html` files in this folder with a browser.
+
+Files
+- `tennis-home.html`, `tennis-examples.html`, related CSS

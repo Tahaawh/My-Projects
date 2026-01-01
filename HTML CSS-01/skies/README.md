@@ -1,6 +1,9 @@
-# Skies
+# Skies — Themed Pages
 
-Two-page examples and styles exploring sky-themed layouts.
+Two small pages exploring sky-themed layouts and styles.
 
 How to view
 - Open `skies-home.html` or `skies-journey.html` in a browser.
+
+Files
+- `skies-home.html`, `skies-journey.html`, CSS files

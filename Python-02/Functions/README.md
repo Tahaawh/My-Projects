@@ -1,6 +1,9 @@
-# Functions
+# Functions — Function Exercises
 
-Function-related exercises and demos.
+Collection of function-focused exercises and helper utilities.
 
 How to run
-- Execute scripts with Python 3.
+- Run the example scripts with Python 3: `python script_name.py`
+
+Files (examples)
+- `even-number-filter-function.py`, `prime-number-checker-function.py`

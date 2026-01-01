@@ -1,6 +1,9 @@
-# Useful Codes
+# Useful Codes — Utilities
 
-Collection of small reusable Python utilities and snippets.
+Reusable Python utility scripts and small tools.
 
-How to use
-- Inspect each file; run with Python 3 where applicable.
+How to run
+- Execute scripts with Python 3 where applicable.
+
+Files (examples)
+- `prime-number.py`, `bubble-sort.py`, `divisors.py`
